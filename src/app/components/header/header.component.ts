@@ -1,5 +1,5 @@
 //Este componente se ha creado de forma manual
-import{Component} from '@angular/core'; //Lo primero que hay que hacer es importar el component para poder utilizarlo
+import{Component} from '@angular/core'; //Lo primero que hay que hacer es importar el component para poder utilizarlo. Esto importa el componente que s utiliza como decorador para que la clase de TypeScript se convierta en un componente.
 
 @Component({
     selector: 'app-header', //Lo primero que se define cuando se crea un component es el selector. Esto es lo que luego se traduce en las etiquetas que se van a colocar más adelante en la web para reflejar dónde está el controlador. El nombre cumple un estándar al empezar por app-, ya que refleja que es personalizado.
