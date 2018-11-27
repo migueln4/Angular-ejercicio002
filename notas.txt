@@ -1,0 +1,52 @@
+Para crear la nueva aplicación, hay que situarse, con la terminal, en la carpeta en la que se quiere crear y poner:
+
+ng new my-app
+(donde my-app es el nombre de la aplicación)
+
+Para levantar un servidor en el que trabajar, en la carpeta del proyecto hay que poner (en la terminal):
+
+ng serve -o
+(-o es lo que te abre el navegador una vez que lo levanta)
+-> Por defecto, usa el puerto 4200
+-> Se accede a través de localhost:4200
+-> El proceso se cancela con Ctrl+C
+
+Lo que se ve nada más abrir el navegador es lo que hay en src/app.component.html
+
+*Por defecto, tiene la recarga automática.
+
+--------ESTRUCTURA DEL PROYECTO------
+
+- La carpeta e2e: Está hecha para el manejo de las pruebas end-2-end y hacer pruebas unitaras y de integración.
+
+- La carpeta node_modules: Estos son los más de mil paquetes que instala Angular. Ayudan a muchas cosas como escuchar los cambios en la aplicación o montar el servidor. Solo con el fin de desarrollo. Cuando se termine de hacer la aplicación, se corre un script que deja únicamente lo que la aplicación necesite para funcionar correctamente. No se sube a ningún repositorio.
+-> Esta carpeta se puede borrar del proyecto y, cuando se necesite en algún momento, hay que ejecutar npm install dentro de la carpeta en la que se quiere seguir desarrollando el proyecto. Se genera en base al package.json
+
+- .editorconfig: no es realmente importante.
+
+- .gitignore: es un archivo que le dice a Git que ignore los archivos o carpetas que existen en el proyecto. Por ejemplo, indica que se tiene que ignorar node-modules; pero también la carpeta dist, etc.
+
+- angular.json: es un archivo que le dice a Angualr cómo debe funcionar. Se edita a medida que se vaya avanzando en el desarrollo del proyecto de Angular. Hay muchas cosas que no se tocan manualmente.
+
+- package-lock.json: no lo modificamos nosotros, va todo automático. A medida que se instalan cosas, se va actualizando. Refleja cómo se ha creado el archivo package.json
+
+- package.json: Es muy importante. También se va creando de forma automática. Por ejemplo, dice las dependencias que necesita Angualr cuando se pase a producción. Las dependencias de desarrollo solo se usan mientras se está creando la aplicación. Es raro manipularlo.
+
+- README.md: es un archivo que no afecta en absoluto a la aplicación, pero ayuda a mostrar lo que se ha creado. Es útil para GitHub, por ejemplo.
+
+- tsconfig.json: Le dice a Typescript cómo se debe trabajar.
+
+- tslint.json: ayuda a escribir un código más limpio de JavaScript o TypeScript. Normalmente, no se toca, ya que ayuda a detectar los errores de malas prácticas o código sucio.
+
+- La carpeta src: contiene todo el código fuente y donde se pasa la mayor parte el tiempo:
+
+-> - La carpeta app: contiene las aplicaciones:
+-> - index.html: es una página web completamente normal salvo por las etiquetas app-root.
+-> - app.component.css: es el archivo que sirve para darle estilo a HTML dentro de la misma carpeta. Por lo general, tiene el mismo nombre (app.component.html), pero también viene definido en el archivo app.component.ts
+-> - app.component.html: es el código HTML de un componente.
+-> - app.component.spec.ts: como cualquier archivo con extensión .spec.ts es un archivo de pruebas automáticas.
+-> - app.module.ts: básicamente, es una simple clase de JavaScript o TypeScript, pero que tiene un decorador llamado NgModule que está definido de una forma distinta a la habitual.
+-> - La carpeta assets: contiene el archivo .gitkeep para que el git mantenga esta carpeta y no se suba vacía. Por lo general, aquí se coloca el recurso estático como imágenes y demás.
+-> - browserlist: es un archivo que sirve para ajustar CSS. No es un archivo realmente necesario.
+-> - main.ts/polyfills.ts... Son archivos que no se manipulan directamente. El main.ts es el pimer código que Angular lanza para correr la aplicación. La función 
+-> - karma.conf.js: Es el archivo de configuración de las pruebas de karma.
