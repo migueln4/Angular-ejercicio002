@@ -1,0 +1,26 @@
+<div class="row">
+
+    <div class="col">
+        <h2>*ngIf</h2>
+        <!-- *ngIf es propio de Angular. Debe ponerse tal cual en el objeto en el que queramos que se ejecute el condicional que estamos diseñando. Siempre debe estar igualado a algo que devuelva un dator booleano. Cuando se coloca en falso, Angular "destruye" el elemento y no aparece, ni siquiera, en el HTML al inspeccionar el elemento. No hace falta ponerle las llaves al nombre de la variable que ya viene de la clase en la que estamos trabajando.-->
+        <div *ngIf="mostrar" class="card text-white bg-dark mb-3" style="max-width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title">{{frase.autor}}</h5>
+                <p class="card-text">{{frase.mensaje}}</p>
+            </div>
+        </div>
+        <!--Cuando se pone "(click)" se puede especificar qué se quiere que ejecute cuando se hace clic en ese elemento determinado. En este caso en particular, lo que se hace es cambiar el valor de la variable booleana "mostrar"-->
+        <button (click)="mostrar = !mostrar" class="btn btn-outline-dark btn-block">Mostrar/Ocultar</button>
+    </div>
+
+    <div class="col">
+        <h2>*ngFor</h2>
+        <!--Esto trabaja con listas o arrays.-->
+        <ul class="list-group">
+            <!--Se identifica qué es lo que se tiene que clonar para que muestre la lista ordenada completa. Es decir, hay que saber qué es lo que se necesita repetir. La sintaxis es: let nombreVariableEnBucle of nombreArrayARecorrer
+            Cuando hace falta recuperar la posición del índice, hay que especificarla añadiendo ; let nombreVariable = index-->
+            <li *ngFor="let personaje of personajes; let i = index" class="list-group-item">{{i+1}}. {{personaje}}</li>
+        </ul>
+    </div>
+
+</div>
