@@ -10,6 +10,7 @@ ng serve -o
 -> Por defecto, usa el puerto 4200
 -> Se accede a través de localhost:4200
 -> El proceso se cancela con Ctrl+C
+-> Si se baja el servidor, empiezan a aparecer errores en la consola. Cuando se vuelve a levantar es cuando se solucionan todos estos problemas.
 
 Lo que se ve nada más abrir el navegador es lo que hay en src/app.component.html
 
@@ -60,4 +61,12 @@ Lo que se ve nada más abrir el navegador es lo que hay en src/app.component.html
 
 Dentro de src/app/ se crea una carpeta que se llama components. Ahí es donde vamos a meter los componentes personalizados. Ahora, dentro de esta nueva carpeta, se van a crear varias carpetas en las que se van a crear las diferentes zonas de la web donde va a afectar el nuevo componente: header, sidebar, footer, etc.
 -> Ojo con el nombre del nuevo archivo: nombre.component.ts.
+
+**Comentariso en el header component.
+
+CÓMO HACERLO DE FORMA AUTOMÁTICA:
+
+En el terminal (dentro de la carpeta en la que está el proyecto)
+ng generate component [carpeta en la que se quiere crear con el nombre del componente]
+ng g c [carpeta] <--- Esto es igual, pero abreviado
  
